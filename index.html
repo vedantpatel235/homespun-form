@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homespun Chef Application</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-yellow-50 font-sans">
+
+  <!-- Hero Section with veg food image -->
+  <section class="bg-yellow-100 py-16 relative">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-orange-800 mb-4">Become a Homespun Chef</h1>
+      <p class="text-orange-700 text-lg md:text-xl mb-6">Share your homemade veg meals with customers in Ahmedabad! Apply below.</p>
+
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="Home Cooking" class="mx-auto w-40 md:w-60">
+      alt="Vegetarian food plate"
+           class="mx-auto w-40 md:w-60 rounded-lg shadow-lg">
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl -mt-16 relative z-10">
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-6">Chef Application Form</h2>
+    <p class="text-gray-600 text-center mb-8">Join our network of trusted home chefs and start serving delicious veg meals!</p>
+
+    <form id="chefForm" class="space-y-6">
+
+      <!-- Name & Age -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Full Name *</label>
+          <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Age *</label>
+          <input type="number" id="age" name="age" min="18" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+        </div>
+      </div>
+
+      <!-- Gender & Phone -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Gender</label>
+          <select id="gender" name="gender" class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Phone Number *</label>
+          <input type="text" id="phone" name="phone" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+        </div>
+      </div>
+
+      <!-- Email & Area -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Email Address *</label>
+        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Residential Area / Society *</label>
+        <input type="text" id="area" name="area" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+      </div>
+
+      <!-- Cuisine -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Cuisine / Food Specialty</label>
+        <div class="mt-2 space-y-1">
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="specialty" value="Gujarati Thali" class="form-checkbox text-orange-500">
+            <span class="ml-2 text-gray-700">Gujarati Thali</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="specialty" value="Jain Food" class="form-checkbox text-orange-500">
+            <span class="ml-2 text-gray-700">Jain Food</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="specialty" value="Healthy Meals" class="form-checkbox text-orange-500">
+            <span class="ml-2 text-gray-700">Healthy Meals</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="specialty" value="Indian Sweets / Snacks" class="form-checkbox text-orange-500">
+            <span class="ml-2 text-gray-700">Indian Sweets / Snacks</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Experience & Certification -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Experience in Cooking *</label>
+          <select id="experience" name="experience" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+            <option value="">Select</option>
+            <option value="<1 year">Less than 1 year</option>
+            <option value="1-3 years">1–3 years</option>
+            <option value="3-5 years">3–5 years</option>
+            <option value=">5 years">More than 5 years</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">FSSAI / Food Safety Certification *</label>
+          <select id="fssai" name="fssai" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Daily Cooking & Max Meals -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Can you cook daily for subscription meals? *</label>
+          <select id="dailyCook" name="dailyCook" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Maximum Number of Meals Per Day *</label>
+          <input type="number" id="maxMeals" name="maxMeals" min="1" required class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+        </div>
+      </div>
+
+      <!-- Meal Type -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Preferred Meal Type</label>
+        <div class="mt-2 space-x-4">
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="mealType" value="Breakfast" class="form-checkbox text-orange-500">
+            <span class="ml-2 text-gray-700">Breakfast</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="mealType" value="Lunch" class="form-checkbox text-orange-500">
+            <span class="ml-2 text-gray-700">Lunch</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="mealType" value="Dinner" class="form-checkbox text-orange-500">
+            <span class="ml-2 text-gray-700">Dinner</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input type="checkbox" name="mealType" value="Snacks / Tiffin Boxes" class="form-checkbox text-orange-500">
+            <span class="ml-2 text-gray-700">Snacks / Tiffin Boxes</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Help & File Upload -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Do you have help for packaging/delivery?</label>
+          <select id="help" name="help" class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300">
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Upload Photos of Kitchen & Sample Meals</label>
+          <input type="file" id="photos" name="photos" accept="image/*" multiple class="mt-1 block w-full text-gray-700">
+        </div>
+      </div>
+
+      <!-- Textareas -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Why do you want to join Homespun?</label>
+        <textarea id="reason" name="reason" rows="4" class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300"></textarea>
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Any Additional Information</label>
+        <textarea id="notes" name="notes" rows="3" class="mt-1 block w-full px-4 py-2 border rounded-xl shadow-sm focus:ring-orange-400 focus:border-orange-400 border-gray-300"></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-xl text-lg mt-6 transition duration-300">Apply to Become a Homespun Chef</button>
+
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('chefForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you! Your application has been submitted. We will contact you soon.');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
